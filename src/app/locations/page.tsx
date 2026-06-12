@@ -1,47 +1,48 @@
 import Link from 'next/link';
+import { Container } from '@/components/ui/container';
 import { LOCATIONS } from '@/lib/content';
+import { PageHero, SectionHeading, LocationCard } from '@/components/marketing/PageLayout';
+
+const EXTRA_COUNTRIES = [
+  { flag: '🇫🇷', name: 'France', ips: '1,418,633 IPs', href: '/locations/' },
+  { flag: '🇮🇹', name: 'Italy', ips: '1,393,154 IPs', href: '/locations/' },
+  { flag: '🇨🇦', name: 'Canada', ips: '1,200,000 IPs', href: '/locations/' },
+  { flag: '🇦🇺', name: 'Australia', ips: '980,000 IPs', href: '/locations/' },
+];
 
 export default function LocationsIndexPage() {
   const locs = Object.values(LOCATIONS);
-  const allCountries = [
-    { flag: '🇺🇸', name: 'United States', ips: '3,450,886 IPs', href: '/locations/united-states/' },
-    { flag: '🇮🇳', name: 'India', ips: '3,712,450 IPs', href: '/locations/india/' },
-    { flag: '🇩🇪', name: 'Germany', ips: '1,439,883 IPs', href: '/locations/germany/' },
-    { flag: '🇬🇧', name: 'United Kingdom', ips: '1,421,770 IPs', href: '/locations/united-kingdom/' },
-    { flag: '🇫🇷', name: 'France', ips: '1,418,633 IPs', href: '/locations/' },
-    { flag: '🇮🇹', name: 'Italy', ips: '1,393,154 IPs', href: '/locations/' },
-  ];
 
   return (
     <main>
-      <section className="page-hero">
-        <div className="container page-hero-content">
-          <span className="page-badge">Global Coverage</span>
-          <h1>Top Proxy Locations</h1>
-          <p className="page-desc">Access 34M+ ethically sourced IPs across 195+ countries with city-level targeting.</p>
-        </div>
-      </section>
-      <section className="section section-light">
-        <div className="container">
-          <h2 className="section-title">Featured Locations</h2>
-          <div className="locations-grid">
+      <PageHero
+        badge="Global Coverage"
+        title="Top Proxy Locations"
+        description="Access 34M+ ethically sourced IPs across 195+ countries with city-level targeting."
+      />
+
+      <section className="py-16 lg:py-20">
+        <Container>
+          <SectionHeading title="Featured Locations" />
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {locs.map((loc) => (
-              <Link key={loc.slug} href={`/locations/${loc.slug}/`} className="location-card">
-                <span className="flag">{loc.flag}</span>
-                <div><strong>{loc.title.replace(' Proxy Servers', '')}</strong><span>{loc.ipCount} IPs</span></div>
-              </Link>
+              <LocationCard
+                key={loc.slug}
+                href={`/locations/${loc.slug}/`}
+                flag={loc.flag}
+                name={loc.title.replace(' Proxy Servers', '')}
+                ips={`${loc.ipCount} IPs`}
+              />
             ))}
           </div>
-          <h2 className="section-title" style={{ marginTop: 48 }}>All Countries</h2>
-          <div className="locations-grid">
-            {allCountries.map((c) => (
-              <Link key={c.name} href={c.href} className="location-card">
-                <span className="flag">{c.flag}</span>
-                <div><strong>{c.name}</strong><span>{c.ips}</span></div>
-              </Link>
+
+          <SectionHeading title="More Countries" className="mt-16" />
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {EXTRA_COUNTRIES.map((c) => (
+              <LocationCard key={c.name} href={c.href} flag={c.flag} name={c.name} ips={c.ips} />
             ))}
           </div>
-        </div>
+        </Container>
       </section>
     </main>
   );

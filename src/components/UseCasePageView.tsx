@@ -1,73 +1,73 @@
 import Link from 'next/link';
+import { Container } from '@/components/ui/container';
 import type { ContentPage } from '@/lib/content';
+import {
+  PageHero,
+  CtaSection,
+  SectionHeading,
+  PrimaryButton,
+  OutlineButton,
+  SolutionCard,
+} from '@/components/marketing/PageLayout';
 
 export function UseCasePageView({ page }: { page: ContentPage }) {
   return (
     <main>
-      <section className="page-hero">
-        <div className="container page-hero-content">
-          {page.badge && <span className="page-badge">{page.badge}</span>}
-          <h1>{page.title}</h1>
-          <p className="page-desc">{page.description}</p>
-          <div className="hero-cta">
-            <Link href="/register/" className="btn btn-white btn-lg">Get Started</Link>
-            <Link href="/pricing/" className="btn btn-outline btn-lg" style={{ borderColor: 'rgba(255,255,255,0.3)', color: 'white', background: 'rgba(255,255,255,0.08)' }}>View Pricing</Link>
-          </div>
-          {page.stats && (
-            <div className="stats-row">
-              {page.stats.map((s) => (
-                <span key={s.label} className="stat-pill"><strong>{s.value}</strong> {s.label}</span>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
+      <PageHero badge={page.badge} title={page.title} description={page.description} stats={page.stats}>
+        <PrimaryButton href="/register/">Get Started</PrimaryButton>
+        <OutlineButton href="/pricing/" light>
+          View Pricing
+        </OutlineButton>
+      </PageHero>
+
       {page.sections.map((section) => (
-        <section key={section.heading} className="section section-light">
-          <div className="container two-col">
-            <div>
-              <h2 className="section-title" style={{ textAlign: 'left', marginBottom: 16 }}>{section.heading}</h2>
-              <p style={{ color: 'var(--text-secondary)', marginBottom: 20 }}>{section.body}</p>
-              {section.bullets && (
-                <ul style={{ color: 'var(--text-secondary)', fontSize: 14 }}>
-                  {section.bullets.map((b) => (
-                    <li key={b} style={{ padding: '8px 0', paddingLeft: 22, position: 'relative' }}>
-                      <span style={{ position: 'absolute', left: 0, color: 'var(--brand-500)', fontWeight: 700 }}>✓</span>
-                      {b}
-                    </li>
-                  ))}
-                </ul>
-              )}
+        <section key={section.heading} className="py-16 lg:py-20">
+          <Container>
+            <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+              <div>
+                <SectionHeading title={section.heading} />
+                <p className="mt-4 text-neutral-600">{section.body}</p>
+                {section.bullets && (
+                  <ul className="mt-6 space-y-3">
+                    {section.bullets.map((b) => (
+                      <li key={b} className="flex gap-3 text-neutral-700">
+                        <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-100 text-xs font-bold text-brand-600">
+                          ✓
+                        </span>
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+              <div className="flex aspect-video items-center justify-center rounded-xl bg-gradient-to-br from-brand-100 to-brand-200 text-4xl text-brand-600">
+                ▶
+              </div>
             </div>
-            <div className="video-placeholder" aria-hidden="true">▶</div>
-          </div>
+          </Container>
         </section>
       ))}
+
       {page.recommended && (
-        <section className="section section-tint">
-          <div className="container">
-            <h2 className="section-title">Recommended Proxy Types</h2>
-            <div className="solutions-grid">
+        <section className="border-t border-neutral-200 bg-brand-50 py-16 lg:py-20">
+          <Container>
+            <SectionHeading title="Recommended Proxy Types" className="text-center" />
+            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {page.recommended.map((r) => (
-                <Link key={r.href} href={r.href} className="solution-card">
-                  <div className="solution-header"><span className="solution-price">{r.price}</span></div>
-                  <h3>{r.title}</h3>
-                  <p>{r.desc}</p>
-                  <span className="solution-link">Learn more →</span>
-                </Link>
+                <SolutionCard key={r.href} href={r.href} title={r.title} description={r.desc} price={r.price} />
               ))}
             </div>
-          </div>
+          </Container>
         </section>
       )}
-      <section className="cta-section">
-        <div className="container cta-inner">
-          <h2>Ready to Get Started?</h2>
-          <div className="cta-buttons">
-            <Link href="/register/" className="btn btn-primary btn-lg">Create Account</Link>
-            <Link href="/use-cases/" className="btn btn-outline btn-lg">All Use Cases</Link>
-          </div>
-        </div>
+
+      <CtaSection title="Ready to Get Started?" />
+      <section className="border-t border-neutral-200 py-8">
+        <Container className="text-center">
+          <Link href="/use-cases/" className="text-sm font-semibold text-brand-600 hover:underline">
+            ← All Use Cases
+          </Link>
+        </Container>
       </section>
     </main>
   );

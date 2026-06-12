@@ -1,5 +1,5 @@
-import { ResourcePageView } from '@/components/ResourcePageView';
+import { redirect } from 'next/navigation';
 
-export default function DocumentationPage() {
-  return <ResourcePageView slug="documentation" />;
+export default function DocumentationRedirect() {
+  redirect('/docs/');
 }

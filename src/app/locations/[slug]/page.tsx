@@ -1,6 +1,14 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { Container } from '@/components/ui/container';
 import { LOCATIONS } from '@/lib/content';
+import {
+  PageHero,
+  SectionHeading,
+  PrimaryButton,
+  SolutionCard,
+  LocationCard,
+} from '@/components/marketing/PageLayout';
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -15,52 +23,55 @@ export default async function LocationDetailPage({ params }: Props) {
 
   return (
     <main>
-      <section className="page-hero">
-        <div className="container page-hero-content">
-          <span className="page-badge">{loc.badge}</span>
-          <h1>{loc.title}</h1>
-          <p className="page-desc">{loc.description}</p>
-          <div className="hero-cta">
-            <Link href="/register/" className="btn btn-white btn-lg">Get Proxies</Link>
-          </div>
-          {loc.stats && (
-            <div className="stats-row">
-              {loc.stats.map((s) => (
-                <span key={s.label} className="stat-pill"><strong>{s.value}</strong> {s.label}</span>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
+      <PageHero badge={loc.badge} title={loc.title} description={loc.description} stats={loc.stats}>
+        <PrimaryButton href="/register/">Get Proxies</PrimaryButton>
+      </PageHero>
+
+      {loc.sections.map((section) => (
+        <section key={section.heading} className="py-16">
+          <Container>
+            <SectionHeading title={section.heading} />
+            <p className="mt-4 max-w-3xl text-neutral-600">{section.body}</p>
+          </Container>
+        </section>
+      ))}
+
       {loc.cities && (
-        <section className="section section-light">
-          <div className="container">
-            <h2 className="section-title">Top Cities</h2>
-            <div className="locations-grid">
+        <section className="border-t border-neutral-200 bg-brand-50 py-16">
+          <Container>
+            <SectionHeading title="Top Cities" />
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {loc.cities.map((city) => (
-                <div key={city.name} className="location-card">
-                  <span className="flag">🏙️</span>
-                  <div><strong>{city.name}</strong><span>{city.ips}</span></div>
-                </div>
+                <LocationCard
+                  key={city.name}
+                  href={`/locations/${slug}/`}
+                  flag="🏙️"
+                  name={city.name}
+                  ips={city.ips}
+                />
               ))}
             </div>
-          </div>
+          </Container>
         </section>
       )}
-      <section className="section section-tint">
-        <div className="container">
-          <h2 className="section-title">Available Proxy Types</h2>
-          <div className="solutions-grid">
-            <Link href="/residential-proxies/" className="solution-card"><h3>Residential</h3><p>Real household IPs.</p><span className="solution-link">from $1.75/GB →</span></Link>
-            <Link href="/isp-proxies/" className="solution-card"><h3>ISP</h3><p>Static ISP IPs.</p><span className="solution-link">from $1.80/proxy →</span></Link>
-            <Link href="/datacenter-proxies/" className="solution-card"><h3>Datacenter</h3><p>High-speed IPs.</p><span className="solution-link">from $1.39/proxy →</span></Link>
+
+      <section className="py-16">
+        <Container>
+          <SectionHeading title="Available Proxy Types" />
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <SolutionCard href="/residential-proxies/" title="Residential" description="Real household IPs." price="from $1.75/GB" />
+            <SolutionCard href="/isp-proxies/" title="ISP" description="Static ISP IPs." price="from $1.80/proxy" />
+            <SolutionCard href="/datacenter-proxies/" title="Datacenter" description="High-speed IPs." price="from $1.39/proxy" />
           </div>
-        </div>
+        </Container>
       </section>
-      <section className="cta-section">
-        <div className="container cta-inner">
-          <Link href="/locations/" className="btn btn-outline btn-lg">All Locations</Link>
-        </div>
+
+      <section className="border-t border-neutral-200 py-8">
+        <Container className="text-center">
+          <Link href="/locations/" className="text-sm font-semibold text-brand-600 hover:underline">
+            ← All Locations
+          </Link>
+        </Container>
       </section>
     </main>
   );

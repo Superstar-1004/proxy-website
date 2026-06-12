@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #f0fcfd;
+  --color-brand-100: #e1f8fa;
+  --color-brand-200: #7fd4db;
+  --color-brand-300: #27a0ab;
+  --color-brand-400: #00838f;
+  --color-brand-500: #006970;
+  --color-brand-600: #00555e;
+  --color-brand-700: #004449;
+  --color-brand-800: #003338;
+  --color-brand-900: #002428;
+
+  --color-accent-500: #ff9900;
+  --color-accent-600: #e68600;
+
+  --font-sans: 'Be Vietnam Pro', ui-sans-serif, system-ui, sans-serif;
+
+  --animate-marquee: marquee 35s linear infinite;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* IPRoyal-style hero dot grid */
+.hero-grid {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.07) 1px, transparent 0),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px, 48px 48px, 48px 48px;
+}

@@ -11,6 +11,13 @@ const nextConfig: NextConfig = {
     ];
 
     const legacyRedirects = [
+      { source: '/request-a-demo/', destination: '/book-a-demo/', permanent: true },
+      { source: '/request-a-demo', destination: '/book-a-demo/', permanent: true },
+      { source: '/about.html', destination: '/about-us/', permanent: true },
+      { source: '/terms.html', destination: '/terms-of-service/', permanent: true },
+      { source: '/privacy.html', destination: '/privacy-policy/', permanent: true },
+      { source: '/documentation/', destination: '/docs/', permanent: true },
+      { source: '/documentation', destination: '/docs/', permanent: true },
       { source: '/location-united-states.html', destination: '/locations/united-states/', permanent: true },
       { source: '/location-united-kingdom.html', destination: '/locations/united-kingdom/', permanent: true },
       { source: '/location-germany.html', destination: '/locations/germany/', permanent: true },

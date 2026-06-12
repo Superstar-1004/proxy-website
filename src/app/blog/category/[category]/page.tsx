@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { Container } from '@/components/ui/container';
 import { BlogCard } from '@/components/blog/BlogComponents';
 import { BLOG_CATEGORIES, getPostsByCategory, type BlogCategory } from '@/lib/blog';
 
@@ -13,9 +14,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category } = await params;
   const cat = BLOG_CATEGORIES.find((c) => c.id === category);
-  return {
-    title: cat ? `${cat.label} — Blog` : 'Blog Category',
-  };
+  return { title: cat ? `${cat.label} — Blog` : 'Blog Category' };
 }
 
 export default async function BlogCategoryPage({ params }: Props) {
@@ -26,23 +25,25 @@ export default async function BlogCategoryPage({ params }: Props) {
   const posts = getPostsByCategory(category as BlogCategory);
 
   return (
-    <main className="blog-category-page">
-      <div className="container">
-        <nav className="blog-breadcrumb" aria-label="Breadcrumb">
-          <Link href="/blog/">Blog</Link>
+    <main className="py-12">
+      <Container>
+        <nav className="mb-4 flex items-center gap-2 text-sm text-neutral-500" aria-label="Breadcrumb">
+          <Link href="/blog/" className="hover:text-brand-600">Blog</Link>
           <span>/</span>
           <span>{cat.label}</span>
         </nav>
-        <h1 style={{ fontSize: '32px', fontWeight: 700, marginBottom: '32px' }}>{cat.label}</h1>
-        <div className="blog-cards-grid">
+        <h1 className="mb-8 text-3xl font-bold text-brand-900">{cat.label}</h1>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
             <BlogCard key={post.slug} {...post} />
           ))}
         </div>
-        <div style={{ marginTop: '40px' }}>
-          <Link href="/blog/" className="btn btn-outline">← All Blog Posts</Link>
+        <div className="mt-10">
+          <Link href="/blog/" className="rounded-lg border border-brand-300 px-5 py-2.5 text-sm font-semibold text-brand-700 hover:bg-brand-50">
+            ← All Blog Posts
+          </Link>
         </div>
-      </div>
+      </Container>
     </main>
   );
 }
