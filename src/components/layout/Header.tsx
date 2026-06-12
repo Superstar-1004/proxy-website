@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { NAV_LABELS, type NavMenuLabel } from '@/lib/nav';
 import { MegaMenuContent } from './NavMegaMenus';
+import { BrandName } from './BrandName';
 import { Logo } from './Logo';
 import { cn } from '@/lib/utils';
 
@@ -48,21 +49,28 @@ export function Header() {
       className={cn(
         'sticky top-0 z-50 transition-all duration-200',
         lightHeader
-          ? cn('bg-white text-neutral-800 shadow-sm', activeMenu && 'shadow-md')
-          : 'bg-brand-900/90 text-white backdrop-blur-md',
+          ? cn('border-0 bg-white text-neutral-800 shadow-sm', activeMenu && 'shadow-md')
+          : cn(
+              'relative overflow-hidden border-0 text-white shadow-none',
+              home ? 'bg-transparent' : 'bg-gradient-to-b from-brand-600 via-brand-800 to-brand-800',
+            ),
       )}
       onMouseLeave={() => setActiveMenu(null)}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-0 sm:px-6 lg:px-8">
+      {!lightHeader && !home && (
+        <div className="hero-grid pointer-events-none absolute inset-0" aria-hidden="true" />
+      )}
+
+      <div className="relative z-10 mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-0 sm:px-6 lg:px-8">
         <Link
           href="/"
           className={cn(
-            'flex shrink-0 items-center gap-2 py-3.5 font-bold',
+            'flex shrink-0 items-center gap-2.5 py-3.5 font-bold',
             lightHeader ? 'text-brand-800' : 'text-white',
           )}
         >
-          <Logo />
-          <span>ProxyVault</span>
+          <Logo size={42} />
+          <BrandName className="text-xl tracking-tight sm:text-2xl" />
         </Link>
 
         <nav className="hidden flex-1 items-stretch justify-center lg:flex">
@@ -115,7 +123,12 @@ export function Header() {
             <>
               <Link
                 href="/book-a-demo/"
-                className="hidden rounded-lg border border-brand-400 px-4 py-2 text-sm font-semibold text-brand-600 transition hover:bg-brand-50 sm:inline-block"
+                className={cn(
+                  'hidden rounded-lg border px-4 py-2 text-sm font-semibold transition sm:inline-block',
+                  lightHeader
+                    ? 'border-brand-400 text-brand-600 hover:bg-brand-50'
+                    : 'border-white/30 text-white hover:bg-white/10',
+                )}
               >
                 Book a Demo
               </Link>
@@ -160,17 +173,14 @@ export function Header() {
         </div>
       </div>
 
-      {/* Full-width mega menu */}
-      <div
-        className={cn(
-          'hidden overflow-hidden border-t border-neutral-200 bg-white text-neutral-800 transition-all duration-200 lg:block',
-          activeMenu ? 'max-h-[520px] opacity-100 shadow-lg' : 'max-h-0 opacity-0 border-transparent shadow-none',
-        )}
-      >
-        <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-10">
-          {activeMenu && <MegaMenuContent menu={activeMenu} />}
+      {/* Full-width mega menu — only mount when open to avoid collapsed border seam */}
+      {activeMenu && (
+        <div className="relative z-10 hidden max-h-[520px] overflow-hidden border-t border-neutral-200 bg-white text-neutral-800 shadow-lg transition-all duration-200 lg:block">
+          <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-10">
+            <MegaMenuContent menu={activeMenu} />
+          </div>
         </div>
-      </div>
+      )}
 
       {mobileOpen && (
         <div className="border-t border-neutral-200 bg-white px-4 py-4 text-neutral-800 lg:hidden">

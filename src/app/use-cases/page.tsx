@@ -11,7 +11,7 @@ export default function UseCasesIndexPage() {
       <PageHero
         badge="Applications"
         title="Use Cases"
-        description="Explore how teams use ProxyVault proxies across industries and workflows."
+        description="Explore how teams use IPNoble proxies across industries and workflows."
         variant="light"
       />
       <section className="py-16 lg:py-20">

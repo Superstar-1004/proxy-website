@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { Container } from '@/components/ui/container';
 import { PROXY_PACKAGES } from '@/lib/constants';
 import { HomeHero } from '@/components/marketing/HomeHero';
-import { TrustedMarquee } from '@/components/marketing/TrustedMarquee';
 
 export default function HomePage() {
   const products = Object.values(PROXY_PACKAGES);
@@ -10,7 +9,6 @@ export default function HomePage() {
   return (
     <main>
       <HomeHero />
-      <TrustedMarquee />
 
       <section className="py-16 lg:py-24">
         <Container>

@@ -14,6 +14,7 @@ import {
   LogOut,
 } from 'lucide-react';
 import { DASHBOARD_NAV } from '@/lib/constants';
+import { BrandName } from '@/components/layout/BrandName';
 import { Logo } from '@/components/layout/Logo';
 import { cn } from '@/lib/utils';
 
@@ -34,7 +35,7 @@ export function DashboardSidebar() {
     <aside className="flex w-64 flex-col border-r border-neutral-200 bg-white">
       <div className="flex items-center gap-2 border-b border-neutral-200 px-6 py-4">
         <Logo size={28} />
-        <span className="font-bold text-brand-800">ProxyVault</span>
+        <BrandName className="font-bold text-brand-800" />
       </div>
       <nav className="flex-1 space-y-1 p-4">
         {DASHBOARD_NAV.map((item) => {

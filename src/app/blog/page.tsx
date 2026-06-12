@@ -13,7 +13,7 @@ import { CtaSection } from '@/components/marketing/PageLayout';
 
 export const metadata: Metadata = {
   title: 'Blog',
-  description: 'Stay updated with ProxyVault blog — proxy news, tutorials, and industry insights.',
+  description: 'Stay updated with IPNoble blog — proxy news, tutorials, and industry insights.',
 };
 
 export default function BlogPage() {
@@ -27,7 +27,7 @@ export default function BlogPage() {
           <nav className="mb-4 text-sm text-neutral-500" aria-label="Breadcrumb">
             <Link href="/blog/" className="hover:text-brand-600">Blog</Link>
           </nav>
-          <h1 className="text-3xl font-bold text-brand-900 lg:text-4xl">Stay Updated with ProxyVault Blog</h1>
+          <h1 className="text-3xl font-bold text-brand-900 lg:text-4xl">Stay Updated with IPNoble Blog</h1>
         </Container>
       </section>
 

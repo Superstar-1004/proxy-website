@@ -1,10 +1,11 @@
 export type ProxyType = 'residential' | 'datacenter' | 'isp' | 'mobile';
 
 export const SITE = {
-  name: 'ProxyVault',
+  name: 'IPNoble',
   tagline: 'Premium Quality Proxies, Unbeatable Prices',
-  promo: 'ProxyVault Q1 2026 Update: New Products, Enterprise-Grade Features, Broader Coverage',
-  email: 'support@proxyvault.com',
+  promo: 'IPNoble Q1 2026 Update: New Products, Enterprise-Grade Features, Broader Coverage',
+  email: 'support@ipnoble.com',
+  domain: 'ipnoble.com',
   url: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
 };
 

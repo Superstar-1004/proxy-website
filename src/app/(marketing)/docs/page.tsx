@@ -19,7 +19,7 @@ export default function DocsPage() {
         <Container>
           <h1 className="text-4xl font-bold">API Documentation</h1>
           <p className="mt-4 max-w-2xl text-brand-100">
-            Integrate ProxyVault proxies into your applications with our REST API. Authenticate with API keys from your dashboard.
+            Integrate IPNoble proxies into your applications with our REST API. Authenticate with API keys from your dashboard.
           </p>
         </Container>
       </section>
@@ -32,7 +32,7 @@ export default function DocsPage() {
               <p className="text-sm text-neutral-600">Include your API key in the Authorization header:</p>
               <pre className="mt-3 overflow-x-auto rounded-lg bg-brand-900 p-4 text-sm text-brand-100">
 {`curl -H "Authorization: Bearer pv_your_api_key" \\
-  https://api.proxyvault.com/v1/proxies`}
+  https://api.ipnoble.com/v1/proxies`}
               </pre>
             </CardBody>
           </Card>
@@ -57,13 +57,13 @@ export default function DocsPage() {
             <CardBody>
               <pre className="overflow-x-auto rounded-lg bg-neutral-900 p-4 text-sm text-green-400">
 {`# HTTP Proxy
-http://user:pass@gate.proxyvault.com:12321
+http://user:pass@gate.ipnoble.com:12321
 
 # SOCKS5
-socks5://user:pass@gate.proxyvault.com:12322
+socks5://user:pass@gate.ipnoble.com:12322
 
 # With geo targeting
-http://user-country-us-state-ca:pass@gate.proxyvault.com:12321`}
+http://user-country-us-state-ca:pass@gate.ipnoble.com:12321`}
               </pre>
             </CardBody>
           </Card>

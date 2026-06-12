@@ -1,6 +1,8 @@
 import Link from 'next/link';
+import { BrandName } from './BrandName';
 import { Logo } from './Logo';
 import { Container } from '@/components/ui/container';
+import { SITE } from '@/lib/constants';
 
 export function Footer() {
   return (
@@ -10,7 +12,7 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 font-bold text-white">
               <Logo size={28} />
-              <span>ProxyVault</span>
+              <BrandName />
             </Link>
             <p className="mt-3 text-sm">Premium quality proxies at unbeatable prices.</p>
           </div>
@@ -50,7 +52,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-brand-800 pt-6 text-sm sm:flex-row">
-          <p>© Copyright 2026 ProxyVault.com | All rights reserved</p>
+          <p>© Copyright 2026 {SITE.domain} | All rights reserved</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/terms-of-service/" className="hover:text-white">Terms of Service</Link>
             <Link href="/privacy-policy/" className="hover:text-white">Privacy Policy</Link>

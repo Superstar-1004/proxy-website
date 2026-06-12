@@ -17,7 +17,7 @@
 
   --font-sans: 'Be Vietnam Pro', ui-sans-serif, system-ui, sans-serif;
 
-  --animate-marquee: marquee 35s linear infinite;
+  --animate-marquee: marquee 55s linear infinite;
 }
 
 @layer base {

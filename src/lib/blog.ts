@@ -36,15 +36,15 @@ export const BLOG_CATEGORIES: { id: BlogCategory; label: string }[] = [
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'q1-2026-update',
-    title: 'ProxyVault Q1 2026 Update: New Products, Enterprise-Grade Features, Broader Coverage',
-    excerpt: "Learn what's new in ProxyVault in Q1: Rotating Mobile Proxies, Organizations, multi-device access, and more to scale operations efficiently.",
+    title: 'IPNoble Q1 2026 Update: New Products, Enterprise-Grade Features, Broader Coverage',
+    excerpt: "Learn what's new in IPNoble in Q1: Rotating Mobile Proxies, Organizations, multi-device access, and more to scale operations efficiently.",
     category: 'product-news',
     categoryLabel: 'Product news',
     date: 'March 26, 2026',
     readTime: '4 min read',
     featured: true,
     content: [
-      'ProxyVault kicks off 2026 with a major platform update designed to help teams scale proxy operations with less friction. This release introduces Rotating Mobile Proxies, Organizations for team management, and multi-device dashboard access.',
+      'IPNoble kicks off 2026 with a major platform update designed to help teams scale proxy operations with less friction. This release introduces Rotating Mobile Proxies, Organizations for team management, and multi-device dashboard access.',
       'Enterprise customers now get SLA-backed uptime guarantees, dedicated account managers, and invoice billing with NET-30 terms. Our Web Unblocker has been upgraded with improved JavaScript rendering and faster CAPTCHA bypass rates.',
       'Coverage expanded across 15 new countries, bringing our total residential pool to 34M+ IPs. Datacenter locations grew to 65+, and ISP proxy availability now spans 35 countries.',
       'All existing customers receive these updates automatically. New users can sign up without a credit card and start testing immediately.',
@@ -74,7 +74,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '6 min read',
     content: [
       'Sentiment analysis transforms unstructured text from reviews, social media, and forums into quantifiable business intelligence. Proxies enable collection of localized sentiment data across markets.',
-      'Modern NLP pipelines combine transformer models with clean, geographically diverse training data. ProxyVault residential proxies help gather this data without triggering platform blocks.',
+      'Modern NLP pipelines combine transformer models with clean, geographically diverse training data. IPNoble residential proxies help gather this data without triggering platform blocks.',
     ],
   },
   {
@@ -87,7 +87,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '7 min read',
     content: [
       'Combining LLM-powered extraction with reliable proxy infrastructure creates scrapers that adapt to layout changes and bypass common anti-bot measures.',
-      'Claude can parse unstructured HTML into structured JSON, while ProxyVault handles IP rotation, geo-targeting, and session management in the background.',
+      'Claude can parse unstructured HTML into structured JSON, while IPNoble handles IP rotation, geo-targeting, and session management in the background.',
     ],
   },
   {
@@ -113,7 +113,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '10 min read',
     content: [
       'A proxy port is the network port your application connects to on the proxy server. Common ports include 8080 for HTTP, 1080 for SOCKS5, and custom ports assigned by your provider.',
-      'ProxyVault supports HTTP, HTTPS, and SOCKS5 on configurable ports through the dashboard and API.',
+      'IPNoble supports HTTP, HTTPS, and SOCKS5 on configurable ports through the dashboard and API.',
     ],
   },
   {
@@ -126,7 +126,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '8 min read',
     content: [
       'Reverse proxies sit in front of servers and handle client requests, often providing caching, SSL termination, and security. Load balancers distribute traffic across multiple backend servers.',
-      'Forward proxies like ProxyVault route your outbound requests through intermediary IPs — a different use case entirely.',
+      'Forward proxies like IPNoble route your outbound requests through intermediary IPs — a different use case entirely.',
     ],
   },
   {
@@ -138,7 +138,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: 'March 10, 2026',
     readTime: '6 min read',
     content: [
-      'BeautifulSoup makes HTML parsing straightforward. Combine it with ProxyVault proxies for reliable scraping of dynamic e-commerce and listing sites.',
+      'BeautifulSoup makes HTML parsing straightforward. Combine it with IPNoble proxies for reliable scraping of dynamic e-commerce and listing sites.',
       'Use soup.select(".class-name") for CSS selectors, or soup.find with class_ parameter for single elements.',
     ],
   },
@@ -151,7 +151,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: 'March 3, 2026',
     readTime: '12 min read',
     content: [
-      'Session-based scraping requires maintaining cookies across requests. Use requests.Session() with ProxyVault proxies configured via the proxies parameter.',
+      'Session-based scraping requires maintaining cookies across requests. Use requests.Session() with IPNoble proxies configured via the proxies parameter.',
       'Always respect terms of service and only scrape data you have permission to access.',
     ],
   },
@@ -164,7 +164,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: 'February 23, 2026',
     readTime: '13 min read',
     content: [
-      'HTTPX supports both synchronous and asynchronous requests, HTTP/2, and proxy configuration — ideal for high-concurrency scraping with ProxyVault.',
+      'HTTPX supports both synchronous and asynchronous requests, HTTP/2, and proxy configuration — ideal for high-concurrency scraping with IPNoble.',
     ],
   },
   {
@@ -189,25 +189,25 @@ export const BLOG_POSTS: BlogPost[] = [
     date: 'April 2, 2026',
     readTime: '10 min read',
     content: [
-      'Production scrapers need retry logic, exponential backoff, proxy rotation, user-agent rotation, and monitoring. Non-expiring traffic from ProxyVault lets you scale without waste.',
+      'Production scrapers need retry logic, exponential backoff, proxy rotation, user-agent rotation, and monitoring. Non-expiring traffic from IPNoble lets you scale without waste.',
     ],
   },
   {
     slug: 'python-requests-proxy-setup',
     title: 'How to Set Up Proxies with Python Requests',
-    excerpt: 'Step-by-step tutorial for configuring ProxyVault residential proxies in Python.',
+    excerpt: 'Step-by-step tutorial for configuring IPNoble residential proxies in Python.',
     category: 'tutorials',
     categoryLabel: 'Tutorials',
     date: 'March 18, 2026',
     readTime: '7 min read',
     content: [
-      'import requests\n\nproxies = {\n  "http": "http://user:pass@gate.proxyvault.com:12321",\n  "https": "http://user:pass@gate.proxyvault.com:12321",\n}\n\nresponse = requests.get("https://httpbin.org/ip", proxies=proxies)',
+      'import requests\n\nproxies = {\n  "http": "http://user:pass@gate.ipnoble.com:12321",\n  "https": "http://user:pass@gate.ipnoble.com:12321",\n}\n\nresponse = requests.get("https://httpbin.org/ip", proxies=proxies)',
     ],
   },
   {
     slug: '2025-recap',
     title: '2025 Recap: Key Achievements and Innovations',
-    excerpt: "ProxyVault's 2025 in review: new features, optimized performance, and expanded locations.",
+    excerpt: "IPNoble's 2025 in review: new features, optimized performance, and expanded locations.",
     category: 'product-news',
     categoryLabel: 'Product news',
     date: 'December 29, 2025',
@@ -225,7 +225,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: 'June 9, 2026',
     readTime: '7 min read',
     content: [
-      'Both tools pair well with ProxyVault proxies for multi-account management. AdsPower offers competitive pricing; Multilogin targets enterprise teams with advanced fingerprint control.',
+      'Both tools pair well with IPNoble proxies for multi-account management. AdsPower offers competitive pricing; Multilogin targets enterprise teams with advanced fingerprint control.',
     ],
   },
   {

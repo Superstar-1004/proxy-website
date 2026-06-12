@@ -1,4 +1,4 @@
-# ProxyVault — Production SaaS Platform
+# IPNoble — Production SaaS Platform
 
 Premium proxy infrastructure platform built with Next.js 15, PostgreSQL, Prisma, NextAuth, and Stripe.
 

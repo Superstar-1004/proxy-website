@@ -5,14 +5,14 @@ import { ABOUT_STATS, ABOUT_VALUES, ABOUT_TEAM } from '@/lib/legal';
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Discover the team powering ProxyVault — premium proxy infrastructure trusted by thousands of businesses worldwide.',
+  description: 'Discover the team powering IPNoble — premium proxy infrastructure trusted by thousands of businesses worldwide.',
 };
 
 const PILLARS = [
   {
     title: 'Who We Are',
     heading: 'A Quality-Driven Company with Deep Technical Roots',
-    body: 'ProxyVault started with a shared idea: proxy infrastructure should be reliable enough that no one has to think about it. That idea has grown into a global network trusted by over 10,000 businesses — from startups to enterprises operating across dozens of markets.',
+    body: 'IPNoble started with a shared idea: proxy infrastructure should be reliable enough that no one has to think about it. That idea has grown into a global network trusted by over 10,000 businesses — from startups to enterprises operating across dozens of markets.',
   },
   {
     title: 'What Drives Us',
@@ -106,13 +106,13 @@ export default function AboutUsPage() {
             &ldquo;If our network is doing its job, it&apos;s invisible — and that&apos;s exactly where we want to be.&rdquo;
           </blockquote>
           <p className="mt-4 font-semibold text-brand-900">Michael Torres</p>
-          <p className="text-sm text-neutral-500">CEO, ProxyVault</p>
+          <p className="text-sm text-neutral-500">CEO, IPNoble</p>
         </Container>
       </section>
 
       <CtaSection
         title="Ready to Get Started?"
-        description="Join thousands of businesses using ProxyVault for reliable proxy infrastructure."
+        description="Join thousands of businesses using IPNoble for reliable proxy infrastructure."
       />
     </main>
   );

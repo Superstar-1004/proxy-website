@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Be_Vietnam_Pro } from 'next/font/google';
 import { Providers } from '@/components/Providers';
+import { SITE } from '@/lib/constants';
 import './globals.css';
 
 const beVietnam = Be_Vietnam_Pro({
@@ -11,11 +12,15 @@ const beVietnam = Be_Vietnam_Pro({
 
 export const metadata: Metadata = {
   title: {
-    default: 'ProxyVault | Premium Quality Proxies, Unbeatable Prices',
-    template: '%s | ProxyVault',
+    default: `${SITE.name} | ${SITE.tagline}`,
+    template: `%s | ${SITE.name}`,
   },
   description:
     'Proxy infrastructure built for scale and speed. Residential, ISP, datacenter, and mobile proxies with global coverage.',
+  icons: {
+    icon: '/images/company-logo.png',
+    apple: '/images/company-logo.png',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

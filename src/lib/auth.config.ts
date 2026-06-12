@@ -19,8 +19,15 @@ export default {
     newUser: '/dashboard/',
   },
   callbacks: {
+    async signIn({ account }) {
+      return account?.provider === 'google' || account?.provider === 'credentials';
+    },
     async jwt({ token, user }) {
-      if (user) token.id = user.id;
+      if (user?.id) {
+        token.id = user.id;
+      } else if (!token.id && token.sub) {
+        token.id = token.sub;
+      }
       return token;
     },
     async session({ session, token }) {

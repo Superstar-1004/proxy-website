@@ -13,7 +13,7 @@ export const USE_CASES: Record<string, ContentPage> = {
   'web-scraping': {
     slug: 'web-scraping',
     title: 'Web Scraping Proxies',
-    description: 'Scale web scraping with ProxyVault proxies. Millions of IPs, smart rotation, and 99.4% success rates.',
+    description: 'Scale web scraping with IPNoble proxies. Millions of IPs, smart rotation, and 99.4% success rates.',
     badge: 'Use Case',
     stats: [{ value: '32M+', label: 'IPs' }, { value: '99.4%', label: 'success rate' }, { value: '650+', label: 'integrations' }],
     sections: [{
@@ -33,7 +33,7 @@ export const USE_CASES: Record<string, ContentPage> = {
     description: 'Access airline, hotel, and booking sites without CAPTCHAs or blocks.',
     badge: 'Use Case',
     stats: [{ value: '195+', label: 'countries' }, { value: 'City-level', label: 'targeting' }],
-    sections: [{ heading: 'Accurate Fares From Every Market', body: 'Travel sites show different prices by location. ProxyVault lets you query fares as a local user in any country.', bullets: ['Scrape airlines, hotels, and car rentals', 'Bypass geo-pricing restrictions', 'Sticky sessions for booking flows'] }],
+    sections: [{ heading: 'Accurate Fares From Every Market', body: 'Travel sites show different prices by location. IPNoble lets you query fares as a local user in any country.', bullets: ['Scrape airlines, hotels, and car rentals', 'Bypass geo-pricing restrictions', 'Sticky sessions for booking flows'] }],
     recommended: [
       { href: '/residential-proxies/', title: 'Residential', price: 'from $1.75/GB', desc: 'Geo-targeted IPs in each market.' },
       { href: '/isp-proxies/', title: 'ISP', price: 'from $1.80/proxy', desc: 'Static IPs for fare monitoring.' },
@@ -66,7 +66,7 @@ export const USE_CASES: Record<string, ContentPage> = {
     title: 'AI Data Collection',
     description: 'Scale AI training data collection with proxies that bypass bans and rate limits.',
     badge: 'Use Case',
-    sections: [{ heading: 'Build Better Training Datasets', body: 'LLMs need diverse web data. ProxyVault helps teams collect text and structured content at scale.', bullets: ['Multilingual content from global sources', 'Web Unblocker for CAPTCHAs and JS rendering', 'Programmatic ordering via REST API'] }],
+    sections: [{ heading: 'Build Better Training Datasets', body: 'LLMs need diverse web data. IPNoble helps teams collect text and structured content at scale.', bullets: ['Multilingual content from global sources', 'Web Unblocker for CAPTCHAs and JS rendering', 'Programmatic ordering via REST API'] }],
     recommended: [
       { href: '/web-unblocker/', title: 'Web Unblocker', price: 'from $1.00/1000 req', desc: 'Automated unblocking.' },
       { href: '/residential-proxies/', title: 'Residential', price: 'from $1.75/GB', desc: 'Large-scale crawling.' },
@@ -125,7 +125,7 @@ export const RESOURCE_PAGES: Record<string, { title: string; description: string
     description: 'Step-by-step tutorials to configure proxies in under 10 minutes.',
     items: [
       { title: 'Residential Proxies Setup', desc: 'cURL, Python, Node.js, and PHP examples.' },
-      { title: 'Scrapy Integration', desc: 'Add ProxyVault middleware to Scrapy.' },
+      { title: 'Scrapy Integration', desc: 'Add IPNoble middleware to Scrapy.' },
       { title: 'Puppeteer & Playwright', desc: 'Browser automation with proxies.' },
     ],
   },
@@ -140,7 +140,7 @@ export const RESOURCE_PAGES: Record<string, { title: string; description: string
   },
   integrations: {
     title: 'Integrations',
-    description: 'Connect ProxyVault to 650+ tools and platforms.',
+    description: 'Connect IPNoble to 650+ tools and platforms.',
     items: [
       { title: 'Python', desc: 'Requests, Scrapy, httpx, and aiohttp.' },
       { title: 'Node.js', desc: 'Puppeteer, Playwright, and axios.' },

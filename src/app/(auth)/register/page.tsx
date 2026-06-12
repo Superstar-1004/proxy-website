@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { AuthDivider, GoogleSignInButton } from '@/components/auth/GoogleSignInButton';
 import { Card, CardBody } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -58,6 +59,11 @@ export default function RegisterPage() {
           <h1 className="text-2xl font-bold text-brand-900">Create your account</h1>
           <p className="mt-1 text-sm text-neutral-500">Start using premium proxies in minutes</p>
         </div>
+
+        <GoogleSignInButton mode="sign-up" callbackUrl="/dashboard/" />
+
+        <AuthDivider />
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="name" className="mb-1 block text-sm font-medium">Full name</label>
@@ -73,12 +79,10 @@ export default function RegisterPage() {
           </div>
           {error && <p className="text-sm text-red-600">{error}</p>}
           <Button type="submit" className="w-full" size="lg" disabled={loading}>
-            {loading ? 'Creating account…' : 'Create Account'}
+            {loading ? 'Creating account…' : 'Create Account with Email'}
           </Button>
         </form>
-        <Button type="button" variant="outline" className="mt-3 w-full" onClick={() => signIn('google', { callbackUrl: '/dashboard/' })}>
-          Sign up with Google
-        </Button>
+
         <p className="mt-6 text-center text-sm text-neutral-500">
           Already have an account? <Link href="/login/" className="font-semibold text-brand-600 hover:underline">Sign in</Link>
         </p>

@@ -10,8 +10,8 @@ export const TERMS_SECTIONS: LegalSection[] = [
     id: 'general',
     title: '1. General Provisions',
     content: [
-      'This Terms of Service agreement ("Agreement") governs the relationship between ProxyVault ("Company", "we", "us") and any person or entity using our services ("Client", "you").',
-      'ProxyVault provides proxy infrastructure solutions including residential, datacenter, ISP, and mobile proxies, along with API access and account management tools (collectively, the "Services"). Services are available at proxyvault.com and through our dashboard.',
+      'This Terms of Service agreement ("Agreement") governs the relationship between IPNoble ("Company", "we", "us") and any person or entity using our services ("Client", "you").',
+      'IPNoble provides proxy infrastructure solutions including residential, datacenter, ISP, and mobile proxies, along with API access and account management tools (collectively, the "Services"). Services are available at ipnoble.com and through our dashboard.',
       'By creating an account, purchasing a plan, or using our Services, you agree to this Agreement, our Privacy Policy, and Acceptable Use Policy. If you do not agree, you must not use our Services.',
       'We may update this Agreement at any time. Continued use of the Services after changes constitutes acceptance. The latest version is always available at /terms-of-service/.',
     ],
@@ -59,7 +59,7 @@ export const TERMS_SECTIONS: LegalSection[] = [
     id: 'ip',
     title: '6. Intellectual Property',
     content: [
-      'ProxyVault retains all rights to our platform, branding, documentation, and software. You receive a limited, non-exclusive license to use the Services during your active subscription.',
+      'IPNoble retains all rights to our platform, branding, documentation, and software. You receive a limited, non-exclusive license to use the Services during your active subscription.',
       'Data collected through proxies remains subject to the rights of respective content owners. We do not grant rights to third-party content accessed via our network.',
     ],
   },
@@ -85,7 +85,7 @@ export const TERMS_SECTIONS: LegalSection[] = [
     id: 'contact',
     title: '9. Contact',
     content: [
-      'For questions about this Agreement, contact support@proxyvault.com.',
+      'For questions about this Agreement, contact support@ipnoble.com.',
       'Effective date: June 1, 2026. Version 1.0.',
     ],
   },
@@ -96,7 +96,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
     id: 'intro',
     title: '1. Introduction',
     content: [
-      'ProxyVault ("we", "us") respects your privacy. This Privacy Policy explains how we collect, use, disclose, and protect personal data when you use our website, dashboard, and proxy services.',
+      'IPNoble ("we", "us") respects your privacy. This Privacy Policy explains how we collect, use, disclose, and protect personal data when you use our website, dashboard, and proxy services.',
       'By using our Services, you consent to the practices described here. If you disagree, please do not use our Services.',
     ],
   },
@@ -145,7 +145,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
     content: [
       'Account data is retained while your account is active and for a reasonable period afterward for legal and billing purposes.',
       'Usage logs are retained as needed for billing disputes and abuse investigation, typically up to 12 months.',
-      'You may request deletion of your account and associated personal data by contacting support@proxyvault.com.',
+      'You may request deletion of your account and associated personal data by contacting support@ipnoble.com.',
     ],
   },
   {
@@ -154,7 +154,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
     content: [
       'Depending on your location, you may have rights to access, correct, delete, or port your personal data, and to object to or restrict certain processing.',
       'EU/EEA residents may lodge complaints with their local data protection authority. UK residents may contact the ICO.',
-      'To exercise your rights, email privacy@proxyvault.com. We will respond within 30 days.',
+      'To exercise your rights, email privacy@ipnoble.com. We will respond within 30 days.',
     ],
   },
   {
@@ -170,7 +170,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
     title: '9. Changes & Contact',
     content: [
       'We may update this Privacy Policy periodically. Material changes will be communicated via email or dashboard notice.',
-      'Contact: privacy@proxyvault.com. Effective date: June 1, 2026.',
+      'Contact: privacy@ipnoble.com. Effective date: June 1, 2026.',
     ],
   },
 ];

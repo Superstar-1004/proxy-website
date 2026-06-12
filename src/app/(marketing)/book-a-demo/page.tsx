@@ -7,7 +7,7 @@ import { Building2, TrendingDown, ShieldCheck } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Book a Demo',
-  description: 'Meet with a ProxyVault product expert. Get a tailored demo of our proxy network for your use case.',
+  description: 'Meet with a IPNoble product expert. Get a tailored demo of our proxy network for your use case.',
 };
 
 const BENEFITS = [
@@ -57,7 +57,7 @@ export default function BookADemoPage() {
               Meet With a Product Expert
             </h1>
             <p className="mt-4 text-lg text-neutral-600">
-              See how ProxyVault can power your web scraping, automation, and data collection at scale.
+              See how IPNoble can power your web scraping, automation, and data collection at scale.
             </p>
           </div>
 
@@ -69,7 +69,7 @@ export default function BookADemoPage() {
 
             <div className="space-y-8">
               <div>
-                <h2 className="text-xl font-bold text-brand-900">ProxyVault customers are winning</h2>
+                <h2 className="text-xl font-bold text-brand-900">IPNoble customers are winning</h2>
                 <div className="mt-6 space-y-5">
                   {BENEFITS.map(({ icon: Icon, title, desc }) => (
                     <div key={title} className="flex gap-4">
@@ -137,7 +137,7 @@ export default function BookADemoPage() {
         </Container>
       </section>
 
-      <TrustedMarquee />
+      <TrustedMarquee variant="light" />
 
       {/* FAQ */}
       <section className="py-16 lg:py-24">

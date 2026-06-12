@@ -22,8 +22,8 @@ import {
 } from 'lucide-react';
 
 export const SITE = {
-  name: 'ProxyVault',
-  promo: 'ProxyVault Q1 2026 Update: New Products, Enterprise-Grade Features, Broader Coverage',
+  name: 'IPNoble',
+  promo: 'IPNoble Q1 2026 Update: New Products, Enterprise-Grade Features, Broader Coverage',
   promoLink: '/blog/q1-2026-update/',
 };
 
@@ -108,7 +108,7 @@ export const RESOURCES_MENU = {
   featured: {
     href: '/blog/q1-2026-update/',
     category: 'Product news',
-    title: 'ProxyVault Q1 2026 Update: New Products, Enterprise-Grade Features, Broader Coverage',
+    title: 'IPNoble Q1 2026 Update: New Products, Enterprise-Grade Features, Broader Coverage',
   },
 };
 
