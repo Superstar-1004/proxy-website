@@ -7,116 +7,21 @@
   <meta name="description" content="Proxy infrastructure built for scale and speed. Residential, ISP, datacenter, and mobile proxies with global coverage.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-  <!-- Header -->
-  <header class="header" id="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <rect width="32" height="32" rx="8" fill="url(#logo-grad)"/>
-          <path d="M8 16L14 10L20 16L14 22L8 16Z" fill="white" opacity="0.9"/>
-          <path d="M16 8L22 14L16 20L10 14L16 8Z" fill="white" opacity="0.5"/>
-          <defs>
-            <linearGradient id="logo-grad" x1="0" y1="0" x2="32" y2="32">
-              <stop stop-color="#8B5CF6"/>
-              <stop offset="1" stop-color="#6366F1"/>
-            </linearGradient>
-          </defs>
-        </svg>
-        <span>ProxyVault</span>
-      </a>
-
-      <nav class="nav" id="nav">
-        <div class="nav-item has-dropdown">
-          <button class="nav-link" aria-expanded="false">Products</button>
-          <div class="dropdown mega">
-            <div class="dropdown-grid">
-              <div>
-                <h4>Proxies</h4>
-                <a href="#solutions">Residential Proxies <span>Global pool, precise targeting</span></a>
-                <a href="#solutions">ISP Proxies <span>High-performance static IPs</span></a>
-                <a href="#solutions">Datacenter Proxies <span>Top speeds, zero thread limits</span></a>
-                <a href="#solutions">Mobile Proxies <span>Real devices, top carriers</span></a>
-                <a href="#solutions">Web Unblocker <span class="badge">New</span> <span>Automated unblocking</span></a>
-                <a href="#solutions">Enterprise Proxies <span>Fast scaling & integration</span></a>
-              </div>
-              <div>
-                <h4>Tools</h4>
-                <a href="#">Chrome Proxy Extension</a>
-                <a href="#">Firefox Proxy Add-on</a>
-                <a href="#">Proxy Tester</a>
-                <a href="#">Online Proxy Checker</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="nav-item has-dropdown">
-          <button class="nav-link" aria-expanded="false">Pricing</button>
-          <div class="dropdown">
-            <a href="pricing.html#residential">Residential <span>from $1.75/GB</span></a>
-            <a href="pricing.html#isp">ISP <span>from $1.80/proxy</span></a>
-            <a href="pricing.html#datacenter">Datacenter <span>from $1.39/proxy</span></a>
-            <a href="pricing.html#mobile">Mobile <span>from $10.11/GB</span></a>
-            <a href="pricing.html#unblocker">Web Unblocker <span>from $1.00/1000 req</span></a>
-          </div>
-        </div>
-        <div class="nav-item has-dropdown">
-          <button class="nav-link" aria-expanded="false">Use Cases</button>
-          <div class="dropdown">
-            <a href="#use-cases">Web Scraping</a>
-            <a href="#use-cases">Travel Fare Aggregation</a>
-            <a href="#use-cases">Price Monitoring</a>
-            <a href="#use-cases">SEO & SERP Scraping</a>
-            <a href="#use-cases">AI Data Collection</a>
-          </div>
-        </div>
-        <div class="nav-item has-dropdown">
-          <button class="nav-link" aria-expanded="false">Locations</button>
-          <div class="dropdown">
-            <a href="#locations">United States <span>4.2M+ IPs</span></a>
-            <a href="#locations">United Kingdom <span>2.0M+ IPs</span></a>
-            <a href="#locations">Germany <span>2.0M+ IPs</span></a>
-            <a href="#locations">India <span>3.7M+ IPs</span></a>
-            <a href="#locations">All Locations</a>
-          </div>
-        </div>
-        <div class="nav-item has-dropdown">
-          <button class="nav-link" aria-expanded="false">Resources</button>
-          <div class="dropdown">
-            <a href="#">Documentation</a>
-            <a href="#">Quick-Start Guides</a>
-            <a href="#">Help Center</a>
-            <a href="#">Blog</a>
-            <a href="#">Integrations</a>
-          </div>
-        </div>
-      </nav>
-
-      <div class="header-actions">
-        <button class="lang-btn" aria-label="Language">EN</button>
-        <a href="login.html" class="btn btn-ghost">Login</a>
-        <a href="#" class="btn btn-primary">Create Account</a>
-        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
+<body data-page="home">
+  <div id="site-header"></div>
 
   <main>
-    <!-- Hero -->
     <section class="hero">
-      <div class="hero-bg"></div>
       <div class="container hero-content">
         <div class="hero-badge">Best proxy servers 2025</div>
-        <h1>Proxy Infrastructure Built for <span class="gradient-text">Scale and Speed</span></h1>
+        <h1>Proxy Infrastructure Built for Scale and Speed</h1>
         <p class="hero-sub">Own your infrastructure. Avoid vendor lock-in. Stay in control of performance and costs.</p>
         <div class="hero-cta">
-          <a href="#" class="btn btn-primary btn-lg">Buy Now</a>
-          <a href="#" class="btn btn-outline btn-lg">
+          <a href="register.html" class="btn btn-white btn-lg">Buy Now</a>
+          <a href="register.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.3);color:white;background:rgba(255,255,255,0.08);">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
             Sign up with Google
           </a>
@@ -125,82 +30,75 @@
       </div>
     </section>
 
-    <!-- Trusted By -->
     <section class="trusted">
       <div class="container">
         <p class="trusted-label">As seen on</p>
         <div class="trusted-logos">
-          <span>TechRadar</span>
-          <span>CNBC</span>
-          <span>PCMag</span>
-          <span>Tech Advisor</span>
-          <span>G2</span>
+          <span>TechRadar</span><span>CNBC</span><span>PCMag</span><span>Tech Advisor</span><span>G2</span>
         </div>
       </div>
     </section>
 
-    <!-- Solutions -->
-    <section class="section solutions" id="solutions">
+    <section class="section section-light">
       <div class="container">
         <h2 class="section-title">Solutions for Every Use Case</h2>
         <div class="solutions-grid">
-          <article class="solution-card" data-type="residential">
+          <a href="residential-proxies.html" class="solution-card">
             <div class="solution-header">
               <span class="solution-price">from $1.75/GB</span>
               <span class="solution-stat">32M+ proxy pool</span>
             </div>
             <h3>Residential</h3>
             <p>Ideal for anonymous high-volume web scraping, SEO monitoring, and geo-targeted research at scale.</p>
-            <a href="#" class="solution-link">Learn more →</a>
-          </article>
-          <article class="solution-card" data-type="isp">
+            <span class="solution-link">Learn more →</span>
+          </a>
+          <a href="isp-proxies.html" class="solution-card">
             <div class="solution-header">
               <span class="solution-price">from $2.00/proxy</span>
               <span class="solution-stat">500K+ unique IPs</span>
             </div>
             <h3>ISP</h3>
             <p>Great for ecommerce automation, ad verification, and long-session reliability. Datacenter speed with residential anonymity.</p>
-            <a href="#" class="solution-link">Learn more →</a>
-          </article>
-          <article class="solution-card" data-type="datacenter">
+            <span class="solution-link">Learn more →</span>
+          </a>
+          <a href="datacenter-proxies.html" class="solution-card">
             <div class="solution-header">
               <span class="solution-price">from $1.39/proxy</span>
               <span class="solution-stat">60+ locations</span>
             </div>
             <h3>Datacenter</h3>
             <p>Best for speed-critical use cases like software testing, scraping, and infrastructure monitoring.</p>
-            <a href="#" class="solution-link">Learn more →</a>
-          </article>
-          <article class="solution-card" data-type="mobile">
+            <span class="solution-link">Learn more →</span>
+          </a>
+          <a href="mobile-proxies.html" class="solution-card">
             <div class="solution-header">
               <span class="solution-price">from $10.11/day</span>
               <span class="solution-stat">4.5M+ IPs</span>
             </div>
             <h3>Mobile</h3>
             <p>Perfect for social platforms, mobile app QA, and regional ad testing with real mobile IPs.</p>
-            <a href="#" class="solution-link">Learn more →</a>
-          </article>
-          <article class="solution-card featured" data-type="unblocker">
+            <span class="solution-link">Learn more →</span>
+          </a>
+          <a href="web-unblocker.html" class="solution-card featured">
             <div class="solution-header">
               <span class="solution-price">from $1.00/1000 requests</span>
               <span class="solution-stat badge">AI</span>
             </div>
             <h3>Web Unblocker</h3>
             <p>Ideal for automated web scraping, bypassing blocks, and reliable access to geo-restricted content.</p>
-            <a href="#" class="solution-link">Learn more →</a>
-          </article>
+            <span class="solution-link">Learn more →</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Features Tabs -->
-    <section class="section features-tabs">
+    <section class="section section-tint features-tabs">
       <div class="container">
         <h2 class="section-title">Everything You Need for Hassle-Free Web Scraping</h2>
         <div class="tabs" role="tablist">
-          <button class="tab active" role="tab" aria-selected="true" data-tab="value">Value</button>
-          <button class="tab" role="tab" aria-selected="false" data-tab="scalability">Scalability</button>
-          <button class="tab" role="tab" aria-selected="false" data-tab="security">Security</button>
+          <button class="tab active" role="tab" data-tab="value">Value</button>
+          <button class="tab" role="tab" data-tab="scalability">Scalability</button>
+          <button class="tab" role="tab" data-tab="security">Security</button>
         </div>
         <div class="tab-panels">
           <div class="tab-panel active" id="panel-value" role="tabpanel">
@@ -228,10 +126,9 @@
       </div>
     </section>
 
-    <!-- API Section -->
-    <section class="section api-section" id="api">
+    <section class="section section-light" id="api">
       <div class="container">
-        <span class="section-label">Integrations & API</span>
+        <span class="section-label">Integrations &amp; API</span>
         <h2 class="section-title">Built to Integrate. Ready to Automate.</h2>
         <p class="section-desc">Connect ProxyVault to the tools you already use. Or build your own automations with our powerful API.</p>
         <div class="api-grid">
@@ -245,7 +142,7 @@
             </ul>
             <a href="#" class="btn btn-outline">See All Integrations</a>
           </div>
-          <div class="api-card code-card">
+          <div class="api-card">
             <h3>Powerful API</h3>
             <div class="code-tabs">
               <button class="code-tab active" data-lang="curl">cURL</button>
@@ -259,7 +156,7 @@
               <button class="copy-btn" id="copy-btn" aria-label="Copy code">Copy</button>
             </div>
             <ul>
-              <li>Programmatic ordering & user management</li>
+              <li>Programmatic ordering &amp; user management</li>
               <li>Multi-location support</li>
               <li>Advanced geo-targeting (city/state)</li>
             </ul>
@@ -269,292 +166,104 @@
       </div>
     </section>
 
-    <!-- Platform Features -->
-    <section class="section platform-features">
+    <section class="section section-tint">
       <div class="container">
         <span class="section-label">Features</span>
         <h2 class="section-title">Reliable Tools for Industry Leaders</h2>
         <p class="section-desc">Manage proxies at scale with secure access, user roles, detailed logs, and API-first workflows.</p>
         <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">👥</div>
-            <h4>Workspace Controls</h4>
-            <p>Add and manage team members with granular user roles and permissions.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🛡️</div>
-            <h4>Built-in 2FA Security</h4>
-            <p>Enable two-factor authentication and manage access across your organization.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">📊</div>
-            <h4>Billing, Your Way</h4>
-            <p>Flexible invoicing and spend tracking for company-level account management.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">📚</div>
-            <h4>Extensive Documentation</h4>
-            <p>Full developer and team documentation for quick setup and scaling.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🔔</div>
-            <h4>Updates & Alerts</h4>
-            <p>In-dashboard notifications keep your team updated on usage and account activity.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">💬</div>
-            <h4>Your Feedback, Built In</h4>
-            <p>Many features are developed directly from customer suggestions.</p>
-          </div>
+          <div class="feature-card"><div class="feature-icon">👥</div><h4>Workspace Controls</h4><p>Add and manage team members with granular user roles and permissions.</p></div>
+          <div class="feature-card"><div class="feature-icon">🛡️</div><h4>Built-in 2FA Security</h4><p>Enable two-factor authentication and manage access across your organization.</p></div>
+          <div class="feature-card"><div class="feature-icon">📊</div><h4>Billing, Your Way</h4><p>Flexible invoicing and spend tracking for company-level account management.</p></div>
+          <div class="feature-card"><div class="feature-icon">📚</div><h4>Extensive Documentation</h4><p>Full developer and team documentation for quick setup and scaling.</p></div>
+          <div class="feature-card"><div class="feature-icon">🔔</div><h4>Updates &amp; Alerts</h4><p>In-dashboard notifications keep your team updated on usage and account activity.</p></div>
+          <div class="feature-card"><div class="feature-icon">💬</div><h4>Your Feedback, Built In</h4><p>Many features are developed directly from customer suggestions.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- Use Cases -->
-    <section class="section use-cases" id="use-cases">
+    <section class="section section-light">
       <div class="container">
         <h2 class="section-title">How Companies Use Our Proxies</h2>
         <div class="use-cases-grid">
-          <a href="#" class="use-case-card">
-            <h4>Privacy Advantages</h4>
-            <p>Stay anonymous online, mask your real IP, and keep sensitive research private.</p>
-            <span class="learn-more">Learn more →</span>
-          </a>
-          <a href="#" class="use-case-card">
-            <h4>SEO Proxies for SERP Scraping</h4>
-            <p>Track keyword positions across locations with block-free proxy access to SERP data.</p>
-            <span class="learn-more">Learn more →</span>
-          </a>
-          <a href="#" class="use-case-card">
-            <h4>Price Monitoring</h4>
-            <p>Track competitor pricing and retail trends across regions in real time.</p>
-            <span class="learn-more">Learn more →</span>
-          </a>
-          <a href="#" class="use-case-card">
-            <h4>Ad Verification</h4>
-            <p>Verify ad placement, targeting, and visibility from any region.</p>
-            <span class="learn-more">Learn more →</span>
-          </a>
-          <a href="#" class="use-case-card">
-            <h4>Market Research</h4>
-            <p>Collect real-time data from global sources to inform product strategy.</p>
-            <span class="learn-more">Learn more →</span>
-          </a>
-          <a href="#" class="use-case-card">
-            <h4>Brand Protection</h4>
-            <p>Detect IP misuse and brand infringement using reliable proxy-powered scraping.</p>
-            <span class="learn-more">Learn more →</span>
-          </a>
+          <a href="use-cases.html" class="use-case-card"><h4>Privacy Advantages</h4><p>Stay anonymous online, mask your real IP, and keep sensitive research private.</p><span class="learn-more">Learn more →</span></a>
+          <a href="use-cases.html" class="use-case-card"><h4>SEO Proxies for SERP Scraping</h4><p>Track keyword positions across locations with block-free proxy access to SERP data.</p><span class="learn-more">Learn more →</span></a>
+          <a href="use-cases.html" class="use-case-card"><h4>Price Monitoring</h4><p>Track competitor pricing and retail trends across regions in real time.</p><span class="learn-more">Learn more →</span></a>
+          <a href="use-cases.html" class="use-case-card"><h4>Ad Verification</h4><p>Verify ad placement, targeting, and visibility from any region.</p><span class="learn-more">Learn more →</span></a>
+          <a href="use-cases.html" class="use-case-card"><h4>Market Research</h4><p>Collect real-time data from global sources to inform product strategy.</p><span class="learn-more">Learn more →</span></a>
+          <a href="use-cases.html" class="use-case-card"><h4>Brand Protection</h4><p>Detect IP misuse and brand infringement using reliable proxy-powered scraping.</p><span class="learn-more">Learn more →</span></a>
         </div>
-        <div class="section-cta">
-          <a href="#" class="btn btn-outline">All Use Cases</a>
-        </div>
+        <div class="section-cta"><a href="use-cases.html" class="btn btn-outline">All Use Cases</a></div>
       </div>
     </section>
 
-    <!-- Enterprise -->
-    <section class="section enterprise">
+    <section class="section section-dark">
       <div class="container">
         <h2 class="section-title">Enterprise Solutions to Everyday Proxy Challenges</h2>
         <div class="enterprise-grid">
-          <div class="enterprise-card">
-            <div class="enterprise-icon">📈</div>
-            <h3>Scalable Control & Insights</h3>
-            <p>Real-time analytics, project-based tracking, and granular team permissions from one centralized dashboard.</p>
-          </div>
-          <div class="enterprise-card">
-            <div class="enterprise-icon">🌐</div>
-            <h3>Enterprise-Grade Uptime</h3>
-            <p>Built-in redundancy and zero third-party dependencies ensure 99.9% uptime for all your projects.</p>
-          </div>
-          <div class="enterprise-card">
-            <div class="enterprise-icon">📍</div>
-            <h3>Pinpoint Geo-Targeting</h3>
-            <p>City- and state-level precision across Residential, ISP, and Datacenter proxies.</p>
-          </div>
+          <div class="enterprise-card"><div class="enterprise-icon">📈</div><h3>Scalable Control &amp; Insights</h3><p>Real-time analytics, project-based tracking, and granular team permissions from one centralized dashboard.</p></div>
+          <div class="enterprise-card"><div class="enterprise-icon">🌐</div><h3>Enterprise-Grade Uptime</h3><p>Built-in redundancy and zero third-party dependencies ensure 99.9% uptime for all your projects.</p></div>
+          <div class="enterprise-card"><div class="enterprise-icon">📍</div><h3>Pinpoint Geo-Targeting</h3><p>City- and state-level precision across Residential, ISP, and Datacenter proxies.</p></div>
         </div>
-        <div class="section-cta">
-          <a href="#" class="btn btn-primary btn-lg">Buy Now</a>
-        </div>
+        <div class="section-cta"><a href="register.html" class="btn btn-white btn-lg">Buy Now</a></div>
       </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="section testimonials">
+    <section class="section section-tint testimonials">
       <div class="container">
         <span class="section-label">Case Studies</span>
         <h2 class="section-title">Backed by Partners Across Industries</h2>
         <div class="testimonial-slider" id="testimonial-slider">
           <div class="testimonial-track">
-            <blockquote class="testimonial-card active">
-              <p>"We tested ProxyVault proxies across tens of thousands of websites and achieved a success rate of over 95%. A substantial improvement over our previous average of 80%."</p>
-              <footer>
-                <strong>Srijan Subedi</strong>
-                <span>Co-founder of Reworkd</span>
-              </footer>
-            </blockquote>
-            <blockquote class="testimonial-card">
-              <p>"What helped us make the final decision was ProxyVault's pricing and location coverage. With proxies from a wide selection of countries, we could easily cover all parts of the world."</p>
-              <footer>
-                <strong>Georgi Petrov</strong>
-                <span>Co-founder and CEO</span>
-              </footer>
-            </blockquote>
-            <blockquote class="testimonial-card">
-              <p>"Their global proxy network allowed us to gather localized search results and gain insights into our market, which was previously difficult."</p>
-              <footer>
-                <strong>Vytautas Urbonas</strong>
-                <span>CMO</span>
-              </footer>
-            </blockquote>
+            <blockquote class="testimonial-card active"><p>"We tested ProxyVault proxies across tens of thousands of websites and achieved a success rate of over 95%. A substantial improvement over our previous average of 80%."</p><footer><strong>Srijan Subedi</strong><span>Co-founder of Reworkd</span></footer></blockquote>
+            <blockquote class="testimonial-card"><p>"What helped us make the final decision was ProxyVault's pricing and location coverage. With proxies from a wide selection of countries, we could easily cover all parts of the world."</p><footer><strong>Georgi Petrov</strong><span>Co-founder and CEO</span></footer></blockquote>
+            <blockquote class="testimonial-card"><p>"Their global proxy network allowed us to gather localized search results and gain insights into our market, which was previously difficult."</p><footer><strong>Vytautas Urbonas</strong><span>CMO</span></footer></blockquote>
           </div>
           <div class="testimonial-dots" id="testimonial-dots"></div>
         </div>
       </div>
     </section>
 
-    <!-- Compliance -->
-    <section class="section compliance">
+    <section class="section section-light">
       <div class="container compliance-inner">
         <div class="compliance-content">
           <span class="section-label">Why Trust ProxyVault?</span>
           <h2>Compliance You Can Trust</h2>
           <p>Every IP in our 32M+ network is sourced through our partner network. We follow a strict KYC policy to ensure safe, responsible use.</p>
         </div>
-        <div class="compliance-visual">
-          <div class="shield-icon">🛡️</div>
-        </div>
+        <div class="compliance-visual"><div class="shield-icon">🛡️</div></div>
       </div>
     </section>
 
-    <!-- Locations -->
-    <section class="section locations" id="locations">
+    <section class="section section-tint">
       <div class="container">
         <h2 class="section-title">Top Proxy Locations</h2>
         <div class="locations-grid">
-          <div class="location-card">
-            <span class="flag">🇺🇸</span>
-            <div>
-              <strong>United States</strong>
-              <span>3,450,886 IPs</span>
-            </div>
-          </div>
-          <div class="location-card">
-            <span class="flag">🇬🇧</span>
-            <div>
-              <strong>United Kingdom</strong>
-              <span>1,421,770 IPs</span>
-            </div>
-          </div>
-          <div class="location-card">
-            <span class="flag">🇩🇪</span>
-            <div>
-              <strong>Germany</strong>
-              <span>1,439,883 IPs</span>
-            </div>
-          </div>
-          <div class="location-card">
-            <span class="flag">🇳🇱</span>
-            <div>
-              <strong>Netherlands</strong>
-              <span>382,025 IPs</span>
-            </div>
-          </div>
-          <div class="location-card">
-            <span class="flag">🇮🇹</span>
-            <div>
-              <strong>Italy</strong>
-              <span>1,393,154 IPs</span>
-            </div>
-          </div>
-          <div class="location-card">
-            <span class="flag">🇫🇷</span>
-            <div>
-              <strong>France</strong>
-              <span>1,418,633 IPs</span>
-            </div>
-          </div>
+          <div class="location-card"><span class="flag">🇺🇸</span><div><strong>United States</strong><span>3,450,886 IPs</span></div></div>
+          <div class="location-card"><span class="flag">🇬🇧</span><div><strong>United Kingdom</strong><span>1,421,770 IPs</span></div></div>
+          <div class="location-card"><span class="flag">🇩🇪</span><div><strong>Germany</strong><span>1,439,883 IPs</span></div></div>
+          <div class="location-card"><span class="flag">🇳🇱</span><div><strong>Netherlands</strong><span>382,025 IPs</span></div></div>
+          <div class="location-card"><span class="flag">🇮🇹</span><div><strong>Italy</strong><span>1,393,154 IPs</span></div></div>
+          <div class="location-card"><span class="flag">🇫🇷</span><div><strong>France</strong><span>1,418,633 IPs</span></div></div>
         </div>
-        <div class="section-cta">
-          <a href="#" class="btn btn-outline">All Locations</a>
-        </div>
+        <div class="section-cta"><a href="locations.html" class="btn btn-outline">All Locations</a></div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="section cta-section">
+    <section class="cta-section">
       <div class="container cta-inner">
         <h2>Have a Large Project?</h2>
         <p>Our proxy experts are always available to help you find the right solution for any need.</p>
         <div class="cta-buttons">
-          <a href="#" class="btn btn-primary btn-lg">Register</a>
+          <a href="register.html" class="btn btn-primary btn-lg">Register</a>
           <a href="#" class="btn btn-outline btn-lg">Book a Demo</a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="logo">
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <rect width="32" height="32" rx="8" fill="url(#logo-grad2)"/>
-              <path d="M8 16L14 10L20 16L14 22L8 16Z" fill="white" opacity="0.9"/>
-              <defs>
-                <linearGradient id="logo-grad2" x1="0" y1="0" x2="32" y2="32">
-                  <stop stop-color="#8B5CF6"/>
-                  <stop offset="1" stop-color="#6366F1"/>
-                </linearGradient>
-              </defs>
-            </svg>
-            <span>ProxyVault</span>
-          </a>
-          <p>Premium quality proxies at unbeatable prices.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Products</h4>
-          <a href="#">Residential Proxies</a>
-          <a href="#">ISP Proxies</a>
-          <a href="#">Datacenter Proxies</a>
-          <a href="#">Mobile Proxies</a>
-          <a href="#">Web Unblocker</a>
-        </div>
-        <div class="footer-col">
-          <h4>Resources</h4>
-          <a href="#">Blog</a>
-          <a href="#">Documentation</a>
-          <a href="#">Help Center</a>
-          <a href="#">Integrations</a>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <a href="#">About Us</a>
-          <a href="#">Careers</a>
-          <a href="#">Case Studies</a>
-          <a href="pricing.html">Pricing</a>
-        </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <a href="#">Terms of Service</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">KYC Policy</a>
-          <a href="#">Acceptable Use Policy</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© Copyright 2026 ProxyVault.com | All rights reserved</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Twitter">𝕏</a>
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="Discord">Discord</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+  <div id="site-footer"></div>
+  <script src="js/layout.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

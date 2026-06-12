@@ -1,13 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-  initHeader();
-  initNavDropdowns();
-  initMobileMenu();
-  initFeatureTabs();
-  initPricingTabs();
-  initLoginForm();
-  initCodeTabs();
-  initCopyButton();
-  initTestimonialSlider();
+  // Layout injects header on same event; run inits after a tick so #header exists
+  requestAnimationFrame(() => {
+    initHeader();
+    initNavDropdowns();
+    initMobileMenu();
+    initFeatureTabs();
+    initPricingTabs();
+    initLoginForm();
+    initRegisterForm();
+    initCodeTabs();
+    initCopyButton();
+    initTestimonialSlider();
+  });
 });
 
 function initHeader() {
@@ -154,6 +158,57 @@ function showFormError(input, message) {
   error.className = 'form-error';
   error.textContent = message;
   input.parentElement.appendChild(error);
+}
+
+function initRegisterForm() {
+  const form = document.getElementById('register-form');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = form.querySelector('#name');
+    const email = form.querySelector('#email');
+    const password = form.querySelector('#password');
+    const terms = form.querySelector('#terms');
+    let valid = true;
+
+    form.querySelectorAll('.form-error').forEach(el => el.remove());
+    [name, email, password].forEach(el => el.classList.remove('error'));
+
+    if (!name.value.trim()) {
+      name.classList.add('error');
+      showFormError(name, 'Please enter your name');
+      valid = false;
+    }
+
+    if (!email.value.trim() || !email.validity.valid) {
+      email.classList.add('error');
+      showFormError(email, 'Please enter a valid email address');
+      valid = false;
+    }
+
+    if (!password.value.trim() || password.value.length < 8) {
+      password.classList.add('error');
+      showFormError(password, 'Password must be at least 8 characters');
+      valid = false;
+    }
+
+    if (!terms.checked) {
+      showFormError(terms, 'You must agree to the terms');
+      valid = false;
+    }
+
+    if (valid) {
+      const btn = form.querySelector('[type="submit"]');
+      btn.textContent = 'Creating account…';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = 'Create Account';
+        btn.disabled = false;
+      }, 1500);
+    }
+  });
 }
 
 const codeExamples = {
