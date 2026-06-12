@@ -44,31 +44,31 @@ const NAV = [
   {
     label: 'Use Cases',
     links: [
-      { href: 'use-cases.html', label: 'Web Scraping' },
-      { href: 'use-cases.html', label: 'Travel Fare Aggregation' },
-      { href: 'use-cases.html', label: 'Price Monitoring' },
-      { href: 'use-cases.html', label: 'SEO & SERP Scraping' },
-      { href: 'use-cases.html', label: 'AI Data Collection' },
+      { href: 'web-scraping.html', label: 'Web Scraping' },
+      { href: 'travel-fare-aggregation.html', label: 'Travel Fare Aggregation' },
+      { href: 'price-monitoring.html', label: 'Price Monitoring' },
+      { href: 'seo-serp-scraping.html', label: 'SEO & SERP Scraping' },
+      { href: 'ai-data-collection.html', label: 'AI Data Collection' },
     ],
   },
   {
     label: 'Locations',
     links: [
-      { href: 'locations.html', label: 'United States', desc: '4.2M+ IPs' },
-      { href: 'locations.html', label: 'United Kingdom', desc: '2.0M+ IPs' },
-      { href: 'locations.html', label: 'Germany', desc: '2.0M+ IPs' },
-      { href: 'locations.html', label: 'India', desc: '3.7M+ IPs' },
+      { href: 'location-united-states.html', label: 'United States', desc: '4.2M+ IPs' },
+      { href: 'location-united-kingdom.html', label: 'United Kingdom', desc: '2.0M+ IPs' },
+      { href: 'location-germany.html', label: 'Germany', desc: '2.0M+ IPs' },
+      { href: 'location-india.html', label: 'India', desc: '3.7M+ IPs' },
       { href: 'locations.html', label: 'All Locations' },
     ],
   },
   {
     label: 'Resources',
     links: [
-      { href: '#', label: 'Documentation' },
-      { href: '#', label: 'Quick-Start Guides' },
-      { href: '#', label: 'Help Center' },
-      { href: '#', label: 'Blog' },
-      { href: '#', label: 'Integrations' },
+      { href: 'documentation.html', label: 'Documentation' },
+      { href: 'quick-start-guides.html', label: 'Quick-Start Guides' },
+      { href: 'help-center.html', label: 'Help Center' },
+      { href: 'blog.html', label: 'Blog' },
+      { href: 'integrations.html', label: 'Integrations' },
     ],
   },
 ];
@@ -171,10 +171,11 @@ function renderFooter() {
         </div>
         <div class="footer-col">
           <h4>Resources</h4>
-          <a href="#">Blog</a>
-          <a href="#">Documentation</a>
-          <a href="#">Help Center</a>
-          <a href="#">Integrations</a>
+          <a href="blog.html">Blog</a>
+          <a href="documentation.html">Documentation</a>
+          <a href="quick-start-guides.html">Quick-Start Guides</a>
+          <a href="help-center.html">Help Center</a>
+          <a href="integrations.html">Integrations</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>

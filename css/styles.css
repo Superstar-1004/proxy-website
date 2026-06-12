@@ -1046,6 +1046,8 @@ ul { list-style: none; }
   transition: all var(--transition);
 }
 
+a.location-card { color: inherit; }
+
 .location-card:hover { border-color: var(--brand-300); }
 
 .location-card .flag { font-size: 28px; }

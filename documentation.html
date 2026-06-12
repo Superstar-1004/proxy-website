@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation | ProxyVault</title>
+  <meta name="description" content="ProxyVault developer documentation. API reference, proxy configuration guides, and integration tutorials for all proxy types.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="documentation">
+  <div id="site-header"></div>
+  <main>
+    <section class="page-hero-light">
+      <div class="container page-hero-content">
+        <span class="page-badge">Resources</span>
+        <h1>Documentation</h1>
+        <p class="page-desc">Full developer and team documentation for quick setup, configuration, and scaling with ProxyVault proxies.</p>
+      </div>
+    </section>
+    <section class="section section-light">
+      <div class="container">
+        <div class="use-cases-grid">
+          <a href="#" class="use-case-card"><h4>Getting Started</h4><p>Account setup, dashboard overview, and your first proxy connection in under 5 minutes.</p><span class="learn-more">Read docs →</span></a>
+          <a href="#" class="use-case-card"><h4>Residential Proxies</h4><p>Configuration, rotation settings, geo-targeting, session control, and traffic management.</p><span class="learn-more">Read docs →</span></a>
+          <a href="#" class="use-case-card"><h4>ISP Proxies</h4><p>Order configuration, proxy strings, extending orders, and SOCKS5 setup.</p><span class="learn-more">Read docs →</span></a>
+          <a href="#" class="use-case-card"><h4>Datacenter Proxies</h4><p>Making orders, subnet selection, rotation options, and performance tuning.</p><span class="learn-more">Read docs →</span></a>
+          <a href="#" class="use-case-card"><h4>Mobile Proxies</h4><p>Auto-rotate settings, carrier selection, and mobile-specific configuration.</p><span class="learn-more">Read docs →</span></a>
+          <a href="#" class="use-case-card"><h4>Web Unblocker</h4><p>API requests, JavaScript rendering, custom headers, and geo-location targeting.</p><span class="learn-more">Read docs →</span></a>
+          <a href="#" class="use-case-card"><h4>API Reference</h4><p>REST API endpoints for orders, users, sub-users, whitelists, and usage reports.</p><span class="learn-more">Read docs →</span></a>
+          <a href="#" class="use-case-card"><h4>Sub-Users &amp; Teams</h4><p>Workspace controls, user roles, permissions, and team management.</p><span class="learn-more">Read docs →</span></a>
+        </div>
+      </div>
+    </section>
+    <section class="section section-tint">
+      <div class="container">
+        <h2 class="section-title">Code Examples</h2>
+        <div class="api-grid">
+          <div class="api-card">
+            <h3>Authentication</h3>
+            <div class="code-block"><pre><code>curl -X GET https://api.proxyvault.com/v1/me \
+  -H "Authorization: Bearer &lt;your_api_token&gt;"</code></pre></div>
+          </div>
+          <div class="api-card">
+            <h3>Residential Proxy Request</h3>
+            <div class="code-block"><pre><code>curl -x http://user:pass@gate.proxyvault.com:12321 \
+  -U "http://targetsite.com" \
+  --proxy-header "X-Proxy-Location: US"</code></pre></div>
+          </div>
+        </div>
+        <div class="section-cta"><a href="quick-start-guides.html" class="btn btn-outline">Quick-Start Guides</a></div>
+      </div>
+    </section>
+    <section class="cta-section"><div class="container cta-inner"><h2>Need Help?</h2><p>Our support team is available 24/7 via live chat and email.</p><div class="cta-buttons"><a href="help-center.html" class="btn btn-primary btn-lg">Help Center</a><a href="register.html" class="btn btn-outline btn-lg">Create Account</a></div></div></section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
