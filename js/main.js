@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavDropdowns();
   initMobileMenu();
   initFeatureTabs();
+  initPricingTabs();
+  initLoginForm();
   initCodeTabs();
   initCopyButton();
   initTestimonialSlider();
@@ -75,6 +77,83 @@ function initFeatureTabs() {
       document.getElementById(`panel-${target}`).classList.add('active');
     });
   });
+}
+
+function initPricingTabs() {
+  const tabs = document.querySelectorAll('.pricing-tab');
+  const panels = document.querySelectorAll('.pricing-panel');
+  if (!tabs.length) return;
+
+  function activateTab(target) {
+    tabs.forEach(t => {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    panels.forEach(p => p.classList.remove('active'));
+
+    const tab = document.querySelector(`.pricing-tab[data-pricing="${target}"]`);
+    const panel = document.getElementById(`pricing-${target}`);
+    if (tab && panel) {
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      panel.classList.add('active');
+    }
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => activateTab(tab.dataset.pricing));
+  });
+
+  const hash = window.location.hash.slice(1);
+  if (hash && document.getElementById(`pricing-${hash}`)) {
+    activateTab(hash);
+  }
+}
+
+function initLoginForm() {
+  const form = document.getElementById('login-form');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const email = form.querySelector('#email');
+    const password = form.querySelector('#password');
+    let valid = true;
+
+    form.querySelectorAll('.form-error').forEach(el => el.remove());
+    email.classList.remove('error');
+    password.classList.remove('error');
+
+    if (!email.value.trim() || !email.validity.valid) {
+      email.classList.add('error');
+      showFormError(email, 'Please enter a valid email address');
+      valid = false;
+    }
+
+    if (!password.value.trim()) {
+      password.classList.add('error');
+      showFormError(password, 'Please enter your password');
+      valid = false;
+    }
+
+    if (valid) {
+      const btn = form.querySelector('[type="submit"]');
+      btn.textContent = 'Signing in…';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = 'Sign In';
+        btn.disabled = false;
+      }, 1500);
+    }
+  });
+}
+
+function showFormError(input, message) {
+  const error = document.createElement('span');
+  error.className = 'form-error';
+  error.textContent = message;
+  input.parentElement.appendChild(error);
 }
 
 const codeExamples = {
