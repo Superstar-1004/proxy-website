@@ -1,23 +1,15 @@
 import NextAuth from 'next-auth';
 import { PrismaAdapter } from '@auth/prisma-adapter';
 import Credentials from 'next-auth/providers/credentials';
-import Google from 'next-auth/providers/google';
 import bcrypt from 'bcryptjs';
+import authConfig from '@/lib/auth.config';
 import { prisma } from '@/lib/prisma';
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
+  ...authConfig,
   adapter: PrismaAdapter(prisma),
-  session: { strategy: 'jwt' },
-  pages: {
-    signIn: '/login',
-    newUser: '/dashboard',
-  },
   providers: [
-    Google({
-      clientId: process.env.AUTH_GOOGLE_ID,
-      clientSecret: process.env.AUTH_GOOGLE_SECRET,
-      allowDangerousEmailAccountLinking: true,
-    }),
+    ...authConfig.providers,
     Credentials({
       name: 'credentials',
       credentials: {
@@ -40,14 +32,4 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       },
     }),
   ],
-  callbacks: {
-    async jwt({ token, user }) {
-      if (user) token.id = user.id;
-      return token;
-    },
-    async session({ session, token }) {
-      if (token?.id) session.user.id = token.id as string;
-      return session;
-    },
-  },
 });
