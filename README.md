@@ -1,49 +1,48 @@
-# ProxyVault — IPRoyal-style Marketing Website
+# ProxyVault — Next.js Website
 
-A static, IPRoyal-inspired proxy service landing page. No build tools or Node.js required.
+Premium proxy marketing site built with **Next.js 15** (App Router), matching [IPRoyal](https://iproyal.com/blog/) style routing and blog layout.
 
-## Quick Start
+## URLs (clean paths, no `.html`)
 
-1. Open `index.html` in your browser, or
-2. Serve locally (recommended for best experience):
+| Route | Example |
+|-------|---------|
+| Home | `/` |
+| Blog index | `/blog/` |
+| Blog article | `/blog/q1-2026-update/` |
+| Blog category | `/blog/category/ai/` |
+| Use cases | `/use-cases/web-scraping/` |
+| Locations | `/locations/united-states/` |
+| Resources | `/documentation/`, `/help-center/` |
+| Products | `/residential-proxies/` |
 
-```powershell
-# Python (if installed)
-cd proxy-website
-python -m http.server 8080
-# Visit http://localhost:8080
+Old static `.html` URLs redirect automatically to clean paths.
+
+## Setup
+
+```bash
+npm install
+npm run dev
 ```
 
-## Customize
+Open [http://localhost:3000](http://localhost:3000)
 
-| What | Where |
-|------|-------|
-| Brand name | Search/replace `ProxyVault` in `index.html` |
-| Colors | CSS variables in `css/styles.css` (`:root`) |
-| Pricing & copy | `index.html` sections |
-| API endpoint | `js/main.js` → `codeExamples` |
+## Deploy (Vercel)
 
-## Sections Included
+1. Push to GitHub
+2. Import project in Vercel — framework preset: **Next.js**
+3. Deploy — no extra config needed (`trailingSlash: true` is set)
 
-- Sticky header with dropdown navigation
-- Hero with CTAs
-- Product solution cards (Residential, ISP, Datacenter, Mobile, Web Unblocker)
-- Feature tabs (Value, Scalability, Security)
-- API / Integrations with code examples
-- Platform features grid
-- Use cases
-- Enterprise highlights
-- Testimonial carousel
-- Compliance & locations
-- Footer
+## Project structure
 
-## Next Steps (Full Product)
+```
+src/
+  app/              # Next.js App Router pages
+    blog/           # IPRoyal-style blog with categories
+    use-cases/      # Dynamic use case pages
+    locations/      # Dynamic location pages
+  components/       # Header, Footer, Blog UI
+  lib/              # Blog posts, nav, content data
+css/styles.css      # Shared styles (IPRoyal teal theme)
+```
 
-To build a complete IPRoyal-like platform, you would also need:
-
-- **Backend**: User auth, billing (Stripe), proxy allocation API
-- **Dashboard**: Account management, usage analytics, team roles
-- **Proxy infrastructure**: Actual IP pools and rotation logic
-- **Additional pages**: Pricing, docs, blog, legal pages
-
-This project covers the **marketing homepage** only.
+Legacy static HTML files in the repo root are superseded by Next.js — use `npm run dev` instead of opening `.html` files directly.
